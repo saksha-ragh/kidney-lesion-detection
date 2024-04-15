@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Kidney Lesion Detection</title>
+</head>
+<body>
+    <h1>Kidney Lesion Detection</h1>
+    <form method="POST" enctype="multipart/form-data" action="/predict">
+        <input type="file" name="image" accept="image/*" required>
+        <button type="submit">Predict</button>
+    </form>
+    
+    {% if prediction %}
+    <h2>Prediction:</h2>
+    <p>{{ prediction }}</p>
+    {% endif %}
+</body>
+</html>
